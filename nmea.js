@@ -2,6 +2,7 @@
 
 var MWV = require('./codecs/MWV.js');
 var VTG = require('./codecs/VTG.js');
+var TGT = require('./codecs/TGT.js');
 
 
 var validLine = function(line) {
@@ -192,7 +193,11 @@ Field Number:
     },
   DBT: require('./codecs/DBT.js').decode,
   MWV: MWV.decode,
-  VTG: VTG.decode
+  VTG: VTG.decode,
+  TGT: TGT.decodeTGT,
+  STA: TGT.decodeSTA,
+  STR: TGT.decodeSTR,
+  CNT: TGT.decodeCNT
 };
 
 exports.encoders = new Object();
